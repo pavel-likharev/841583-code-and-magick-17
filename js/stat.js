@@ -8,7 +8,7 @@ var COLUMN_GAP = 50;
 var FONT_GAP = 35;
 var TEXT_HEIGHT = 55;
 var COLUMN_WIDTH = 40;
-var COLUMN_HEIGHT = CLOUD_HEIGHT - FONT_GAP - TEXT_HEIGHT - FONT_GAP;
+var COLUMN_HEIGHT = 150;
 var FONT = '16px PT Mono';
 
 var columnColor = ['rgba(0, 0, 255, 0.2)', 'rgba(0, 0, 255, 0.4)', 'rgba(0, 0, 255, 0.6)', 'rgba(0, 0, 255, 0.8)', 'rgba(0, 0, 255, 1)'];
