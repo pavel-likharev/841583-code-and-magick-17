@@ -13,8 +13,6 @@ var COLUMN_WIDTH = 40;
 var COLUMN_HEIGHT = 150;
 var FONT = '16px PT Mono';
 
-var columnColor = ['rgba(0, 0, 255, 0.2)', 'rgba(0, 0, 255, 0.4)', 'rgba(0, 0, 255, 0.6)', 'rgba(0, 0, 255, 0.8)', 'rgba(0, 0, 255, 1)'];
-
 var renderCloud = function (ctx, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
@@ -30,6 +28,10 @@ var getMaxElement = function (arr) {
   }
 
   return maxElement;
+};
+
+var getRandomNumber = function () {
+  return Math.random();
 };
 
 window.renderStatistics = function (ctx, names, times) {
@@ -51,7 +53,7 @@ window.renderStatistics = function (ctx, names, times) {
     if (names[i] === 'Вы') {
       ctx.fillStyle = '#ff0000';
     } else {
-      ctx.fillStyle = columnColor[i];
+      ctx.fillStyle = 'rgba(0, 0, 255, ' + getRandomNumber() + ')';
     }
 
     ctx.fillRect(CLOUD_X + GAP_IN + (COLUMN_GAP + COLUMN_WIDTH) * i, CLOUD_Y + TEXT_HEIGHT + COLUMN_HEIGHT + FONT_GAP, COLUMN_WIDTH, (-COLUMN_HEIGHT * times[i]) / maxTime);
